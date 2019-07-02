@@ -1,9 +1,11 @@
 import React, { Fragment, useState } from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
+import { setAlert } from '../../actions/alert';
 
-const Register = () => {
+const Register = props => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,30 +21,9 @@ const Register = () => {
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      console.log('Passwords do not match!');
-      alert('Passwords do not match!');
+      props.setAlert('Passwords do not match!', 'danger');
     } else {
-      const newUser = {
-        name,
-        email,
-        password,
-      };
-      try {
-        const config = {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        };
-        const body = JSON.stringify(newUser);
-        const res = await axios.post(
-          'http://localhost:4000/api/users',
-          body,
-          config
-        );
-        console.log(res.data);
-      } catch (err) {
-        console.log(err.response.data);
-      }
+      console.log('SUCCESS');
     }
   };
   return (
@@ -50,49 +31,69 @@ const Register = () => {
       <div id="RegisterCSS" className="jumbotron">
         <h2>Create Account</h2>
         <form onSubmit={e => onSubmit(e)}>
-          <input
-            onChange={e => onChange(e)}
-            style={{ margin: '5px' }}
-            placeholder="Name"
-            type="text"
-          />{' '}
-          <div>
+          <div className="form-group">
             <input
-              onChange={e => onChange(e)}
+              type="name"
+              placeholder="Name"
+              name="name"
               style={{ margin: '5px' }}
-              placeholder="Email"
+              value={name}
+              onChange={e => onChange(e)}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
               type="email"
-            />{' '}
-          </div>
-          <div>
-            <input
+              placeholder="Email"
+              name="email"
+              value={email}
               onChange={e => onChange(e)}
               style={{ margin: '5px' }}
-              placeholder="Password"
-              type="password"
-            />{' '}
+              required
+            />
           </div>
-          <input
-            onChange={e => onChange(e)}
-            style={{ margin: '5px' }}
-            placeholder="Re-Type Password"
-            type="password"
-          />
+          <div className="form-group">
+            <input
+              style={{ margin: '5px' }}
+              value={password}
+              name="password"
+              onChange={e => onChange(e)}
+              placeholder="Password"
+              type="text"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              style={{ margin: '5px' }}
+              name="password2"
+              value={password2}
+              onChange={e => onChange(e)}
+              placeholder="Re-Type Password"
+              type="text"
+            />
+          </div>
           <div>
             <Button
-              style={{ margin: '20px' }}
-              tag={Link}
-              to="#"
+              style={{ marginBottom: '40px' }}
+              type="submit"
+              value="Register"
               outline
               color="success"
             >
               Submit
             </Button>
           </div>
+          <p>Already have an account?</p>
+          <Link to="./login">Login Here</Link>
         </form>
       </div>
     </Fragment>
   );
 };
 
-export default Register;
+export default connect(
+  null,
+  { setAlert }
+)(Register);
