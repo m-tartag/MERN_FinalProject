@@ -21,3 +21,11 @@
 .LandingButton {
   margin: 5px;
 }
+
+/* Register Styles */
+
+#RegisterCSS {
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}

@@ -1,11 +1,15 @@
 const express = require('express');
 const chalk = require('chalk');
+const cors = require('cors');
 const connectDB = require('./config/db');
 
 const PORT = process.env.PORT || 4000;
 
 // Initialize Express
 const app = express();
+
+// Cors Middleware
+app.use(cors());
 
 // Connect Database
 connectDB();

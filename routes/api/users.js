@@ -1,7 +1,6 @@
 const express = require('express');
 
 const router = express.Router();
-const gravatar = require('gravatar');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const bcrypt = require('bcryptjs');
@@ -46,14 +45,6 @@ router.post(
         res.status(400).json({ errors: [{ msg: 'User already exists' }] });
       }
 
-      // 3. Gravatar middleware
-
-      const avatar = gravatar.url(email, {
-        s: '200',
-        r: 'pg',
-        d: 'mm',
-      });
-
       // 4. Create New User
 
       // This creates a new instance of the user.. it doesnt SAVE IT YET
@@ -61,7 +52,6 @@ router.post(
       user = new User({
         name,
         email,
-        avatar,
         password,
       });
 

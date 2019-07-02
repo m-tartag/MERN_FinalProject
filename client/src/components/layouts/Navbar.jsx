@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -7,10 +8,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from 'reactstrap';
 
 export default class Example extends React.Component {
@@ -33,25 +30,20 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="warning" light expand="md">
-          <NavbarBrand href="/">My App</NavbarBrand>
+          <NavbarBrand href="/">MattSpace</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">News</NavLink>
+                <NavLink tag={Link} to="/register">
+                  Register
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">About</NavLink>
+                <NavLink tag={Link} to="/login">
+                  Login
+                </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Account
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Create Account</DropdownItem>
-                  <DropdownItem>Sign In</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
