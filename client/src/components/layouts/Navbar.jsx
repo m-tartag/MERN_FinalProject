@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { StickyContainer, Sticky } from 'react-sticky';
 import {
   Collapse,
   Navbar,
@@ -29,7 +30,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="warning" light expand="md">
+        <Navbar id="Nav" color="warning" light expand="md">
           <NavbarBrand href="/">MattSpace</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
