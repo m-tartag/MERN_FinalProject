@@ -25,7 +25,7 @@ router.post(
     }),
   ],
 
-  // Use Async/Await here - Important
+  // Use Async/Await here
 
   async (req, res) => {
     const errors = validationResult(req);
