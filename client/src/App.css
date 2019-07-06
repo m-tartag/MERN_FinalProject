@@ -1,3 +1,8 @@
+/* font-family: 'Lalezar', cursive;
+font-family: 'Viga', sans-serif;
+font-family: 'BenchNine', sans-serif;
+font-family: 'Passion One', cursive; */
+
 /* Landing Styles */
 
 #Landing {
@@ -31,4 +36,21 @@
   padding-top: 50px;
 }
 
-/* Global Styles */
+/* Navbar */
+
+.Nav {
+  padding-top: 12px;
+  padding-bottom: 5px;
+  background-color: #1565c0;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+.Brand {
+  font-family: 'Lalezar', cursive;
+  font-size: 35px;
+}
+
+.NavLinks {
+  color: white;
+}

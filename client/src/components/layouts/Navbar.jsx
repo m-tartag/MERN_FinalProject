@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Collapse,
@@ -28,26 +28,28 @@ export default class Example extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar className="Nav" color="warning" light expand="md">
-          <NavbarBrand href="/">MattSpace</NavbarBrand>
+      <Fragment>
+        <Navbar className="Nav" sticky="top" light expand="md">
+          <NavbarBrand className="Brand" href="/">
+            MT Design
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} to="/register">
+                <NavLink className="NavLinks" tag={Link} to="/register">
                   Register
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/login">
+                <NavLink className="NavLinks" tag={Link} to="/login">
                   Login
                 </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
+      </Fragment>
     );
   }
 }

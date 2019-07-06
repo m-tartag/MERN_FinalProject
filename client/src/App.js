@@ -14,6 +14,18 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <Fragment>
+        <div
+          style={{
+            padding: '50px',
+            backgroundColor: '#1565C0',
+            color: 'white',
+            textAlign: 'center',
+            fontSize: '60px',
+            fontFamily: 'Viga',
+          }}
+        >
+          Matt Tartaglia Design
+        </div>
         <Navbar />
         <Route exact path="/" component={Landing} />
         <section>
