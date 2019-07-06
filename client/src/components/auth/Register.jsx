@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { setAlert } from '../../actions/alert';
@@ -31,7 +31,7 @@ const Register = props => {
     <Fragment>
       <Navbar />
       <div id="RegisterCSS" className="jumbotron">
-        <h2>Create Account</h2>
+        <h2 style={{ paddingBottom: '20px' }}>Create Account</h2>
         <form onSubmit={e => onSubmit(e)}>
           <div className="form-group">
             <input

@@ -30,19 +30,20 @@ export default class Header extends React.Component {
     return (
       <Fragment>
         <Navbar className="Nav" sticky="top" light expand="md">
-          <NavbarBrand className="Brand" href="/">
-            MT Design
+          <NavbarBrand style={{ color: 'white' }} className="Brand" href="/">
+            MTD Home
           </NavbarBrand>
+
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className="NavLinks" tag={Link} to="/register">
+                <NavLink style={{ color: 'white' }} tag={Link} to="/register">
                   Register
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="NavLinks" tag={Link} to="/login">
+                <NavLink style={{ color: 'white' }} tag={Link} to="/login">
                   Login
                 </NavLink>
               </NavItem>

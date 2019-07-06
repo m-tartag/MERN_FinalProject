@@ -7,7 +7,7 @@ const Login = () => (
   <Fragment>
     <Navbar />
     <div id="LoginCSS" className="jumbotron">
-      <h2>Login</h2>
+      <h2 style={{ paddingBottom: '20px' }}>Login</h2>
       <form>
         <div className="form-group">
           <input

@@ -11,6 +11,7 @@ font-family: 'Passion One', cursive; */
   padding-bottom: 200px;
   margin: 10px;
   text-align: center;
+  background-color: #949faa;
 }
 #News {
   justify-content: center;
@@ -32,13 +33,19 @@ font-family: 'Passion One', cursive; */
 
 #RegisterCSS {
   margin: auto;
+  margin-top: 35px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 30%;
 }
 #LoginCSS {
   margin: auto;
+  margin-top: 35px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 30%;
 }
 
 /* Navbar */
@@ -52,10 +59,6 @@ font-family: 'Passion One', cursive; */
   box-shadow: 0 8px 6px -6px black;
 }
 .Brand {
-  font-family: 'Lalezar', cursive;
-  font-size: 35px;
-}
-
-.NavLinks {
-  color: white;
+  font-family: 'Viga', cursive;
+  font-size: 25px;
 }
