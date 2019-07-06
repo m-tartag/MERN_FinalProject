@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { setAlert } from '../../actions/alert';
+import { Navbar } from '../layouts/index';
 
 const Register = props => {
   const [formData, setFormData] = useState({
@@ -28,6 +29,7 @@ const Register = props => {
   };
   return (
     <Fragment>
+      <Navbar />
       <div id="RegisterCSS" className="jumbotron">
         <h2>Create Account</h2>
         <form onSubmit={e => onSubmit(e)}>

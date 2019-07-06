@@ -1,8 +1,22 @@
 import React, { Fragment } from 'react';
 import { Container, Jumbotron, Button } from 'reactstrap';
+import { Navbar } from './index';
 
 const Landing = () => (
   <Fragment>
+    <div
+      style={{
+        padding: '50px',
+        backgroundColor: '#1565C0',
+        color: 'white',
+        textAlign: 'center',
+        fontSize: '60px',
+        fontFamily: 'Viga',
+      }}
+    >
+      Matt Tartaglia Design
+    </div>
+    <Navbar />
     <Jumbotron id="Landing">
       <h1>Welcome to the App!</h1>
       <Button className="LandingButton" color="success">

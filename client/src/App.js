@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 // Components
-import { Navbar, Landing } from './components/layouts';
+import { Landing } from './components/layouts';
 import { Register, Login } from './components/auth';
 // Global Styles
 import './App.css';
@@ -14,19 +14,6 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <Fragment>
-        <div
-          style={{
-            padding: '50px',
-            backgroundColor: '#1565C0',
-            color: 'white',
-            textAlign: 'center',
-            fontSize: '60px',
-            fontFamily: 'Viga',
-          }}
-        >
-          Matt Tartaglia Design
-        </div>
-        <Navbar />
         <Route exact path="/" component={Landing} />
         <section>
           <Switch>

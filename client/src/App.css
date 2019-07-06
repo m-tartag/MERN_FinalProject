@@ -35,6 +35,11 @@ font-family: 'Passion One', cursive; */
   text-align: center;
   padding-top: 50px;
 }
+#LoginCSS {
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
 
 /* Navbar */
 
