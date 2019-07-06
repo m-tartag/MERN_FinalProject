@@ -11,6 +11,7 @@
   justify-content: center;
   display: flex;
   text-align: center;
+  height: 1000px;
 }
 .LandingContainer {
   border: solid black 2px;
@@ -31,9 +32,3 @@
 }
 
 /* Global Styles */
-
-/* #Nav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-} */

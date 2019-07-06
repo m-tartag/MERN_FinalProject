@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
-// import axios from 'axios';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { setAlert } from '../../actions/alert';
@@ -61,7 +61,7 @@ const Register = props => {
               name="password"
               onChange={e => onChange(e)}
               placeholder="Password"
-              type="text"
+              type="password"
             />
           </div>
           <div className="form-group">
@@ -71,7 +71,7 @@ const Register = props => {
               value={password2}
               onChange={e => onChange(e)}
               placeholder="Re-Type Password"
-              type="text"
+              type="password"
             />
           </div>
           <div>
