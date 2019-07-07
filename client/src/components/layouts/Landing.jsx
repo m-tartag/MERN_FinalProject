@@ -12,6 +12,7 @@ const Landing = () => (
         textAlign: 'center',
         fontSize: '60px',
         fontFamily: 'Viga',
+        borderBottom: 'double 5px darkgray',
       }}
     >
       Matt Tartaglia Design

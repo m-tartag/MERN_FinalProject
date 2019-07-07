@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 // Components
-import { Landing, Slider } from './components/layouts';
+import { Landing } from './components/layouts';
 import { Register, Login } from './components/auth';
 // Global Styles
 import './App.css';
@@ -21,16 +21,6 @@ const App = () => (
             <Route exact path="/login" component={Login} />
           </Switch>
         </section>
-        <div
-          style={{
-            backgroundColor: 'black',
-            border: 'solid',
-            textAlign: 'center',
-          }}
-          className="container"
-        >
-          <Slider />
-        </div>
       </Fragment>
     </Router>
   </Provider>
