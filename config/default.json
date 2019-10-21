@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://adminadmin:admin@mern-finalapp-lulcj.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtToken": "mytoken"
+  "jwtSecret": "mytoken",
+  "githubClientId": "",
+  "githubSecret": ""
 }
